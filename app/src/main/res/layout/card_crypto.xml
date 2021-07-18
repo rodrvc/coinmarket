@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_id"
+    card_view:cardCornerRadius="10dp"
+    card_view:contentPadding="10dp"
+    card_view:cardElevation="6dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/crypto_card_title"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Kripto coin"
+            android:textSize="30dp"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

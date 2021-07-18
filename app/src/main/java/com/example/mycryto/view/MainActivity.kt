@@ -1,7 +1,8 @@
-package com.example.mycryto
+package com.example.mycryto.view
 
 import android.os.Bundle
 import android.view.Menu
+import androidx.activity.viewModels
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -11,12 +12,24 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.mycryto.R
+import com.example.mycryto.adapters.CryptoCoinAdapter
 import com.example.mycryto.databinding.ActivityMainBinding
+import com.example.mycryto.model.CryptoCoin
+import com.example.mycryto.viewmodel.CryptoViewModel
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+    private lateinit var cryptoAdapter: CryptoCoinAdapter
+    private val cryptoList = listOf<CryptoCoin>(
+        CryptoCoin("bitcoin" , "bit")
+    )
+
+    private val cryptoViewModel: CryptoViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +55,25 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
+//        cryptoViewModel.cryptoModel.observe(this , Observer {
+//            cryptoAdapter = CryptoCoinAdapter(it)
+//            binding.cryptoRv.layoutManager = LinearLayoutManager(this)
+//            binding.cryptoRv.adapter = cryptoAdapter
+//        })
+//
+
+//        cryptoViewModel.getCryptoCoins()
+        initRecicler()
+
+    }
+
+
+    private fun initRecicler(){
+        cryptoAdapter = CryptoCoinAdapter(cryptoList);
+        binding.cryptoRv.layoutManager = LinearLayoutManager(this )
+        binding.cryptoRv.adapter = cryptoAdapter
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

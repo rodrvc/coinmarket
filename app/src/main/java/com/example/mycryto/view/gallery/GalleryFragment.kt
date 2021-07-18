@@ -1,4 +1,4 @@
-package com.example.mycryto.ui.gallery
+package com.example.mycryto.view.gallery
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.mycryto.R
 import com.example.mycryto.databinding.FragmentGalleryBinding
 
 class GalleryFragment : Fragment() {
