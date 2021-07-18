@@ -1,4 +1,4 @@
-package com.example.mycryto.view.gallery
+package com.example.mycryto.ui.viewmodel.view.gallery
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

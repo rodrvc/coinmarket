@@ -1,4 +1,4 @@
-package com.example.mycryto.view.slideshow
+package com.example.mycryto.ui.viewmodel.view.slideshow
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

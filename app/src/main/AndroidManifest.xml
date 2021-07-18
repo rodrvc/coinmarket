@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mycryto">
         <activity
-            android:name=".view.MainActivity"
+            android:name="com.example.mycryto.ui.viewmodel.view.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.Mycryto.NoActionBar">
             <intent-filter>

@@ -1,4 +1,4 @@
-package com.example.mycryto.view
+package com.example.mycryto.ui.viewmodel.view
 
 import android.os.Bundle
 import android.view.Menu
@@ -17,8 +17,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mycryto.R
 import com.example.mycryto.adapters.CryptoCoinAdapter
 import com.example.mycryto.databinding.ActivityMainBinding
-import com.example.mycryto.model.CryptoCoin
-import com.example.mycryto.viewmodel.CryptoViewModel
+import com.example.mycryto.data.model.CryptoCoin
+import com.example.mycryto.ui.viewmodel.viewmodel.CryptoViewModel
 
 class MainActivity : AppCompatActivity() {
 
@@ -57,15 +57,18 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
 
-//        cryptoViewModel.cryptoModel.observe(this , Observer {
-//            cryptoAdapter = CryptoCoinAdapter(it)
-//            binding.cryptoRv.layoutManager = LinearLayoutManager(this)
-//            binding.cryptoRv.adapter = cryptoAdapter
-//        })
-//
+        cryptoViewModel.onCreate()
 
-//        cryptoViewModel.getCryptoCoins()
-        initRecicler()
+
+        cryptoViewModel.cryptoModel.observe(this , Observer {
+            cryptoAdapter = CryptoCoinAdapter(it)
+            binding.cryptoRv.layoutManager = LinearLayoutManager(this)
+            binding.cryptoRv.adapter = cryptoAdapter
+        })
+
+//
+//        cryptoViewModel.getCryptoCoins() cryptoViewModel.getCryptoCoins()
+//        initRecicler()
 
     }
 
