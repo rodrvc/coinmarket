@@ -25,9 +25,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
     private lateinit var cryptoAdapter: CryptoCoinAdapter
-    private val cryptoList = listOf<CryptoCoin>(
-        CryptoCoin("bitcoin" , "bit")
-    )
+//    private val cryptoList = listOf<CryptoCoin>(
+//        CryptoCoin("bitcoin" , "bit")
+//    )
 
     private val cryptoViewModel: CryptoViewModel by viewModels()
 
@@ -73,11 +73,11 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun initRecicler(){
-        cryptoAdapter = CryptoCoinAdapter(cryptoList);
-        binding.cryptoRv.layoutManager = LinearLayoutManager(this )
-        binding.cryptoRv.adapter = cryptoAdapter
-    }
+//    private fun initRecicler(){
+//        cryptoAdapter = CryptoCoinAdapter(cryptoList);
+//        binding.cryptoRv.layoutManager = LinearLayoutManager(this )
+//        binding.cryptoRv.adapter = cryptoAdapter
+//    }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.

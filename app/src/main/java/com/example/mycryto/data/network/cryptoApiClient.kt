@@ -1,6 +1,7 @@
 package com.example.mycryto.data.network
 
 import com.example.mycryto.data.model.CryptoCoin
+import com.example.mycryto.data.model.CryptoCoinDetail
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Headers
@@ -11,5 +12,5 @@ interface cryptoApiClient {
 
     
 
-    suspend fun getCryptoCoins():Response<List<CryptoCoin>>
+    suspend fun getCryptoCoins():Response<CryptoCoin>
 }

@@ -5,8 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mycryto.R
 import com.example.mycryto.data.model.CryptoCoin
+import com.example.mycryto.data.model.CryptoCoinDetail
 
-class CryptoCoinAdapter(private val cryptocoins: List<CryptoCoin>):RecyclerView.Adapter<CryptoViewHolder>() {
+class CryptoCoinAdapter(private val cryptocoins: List<CryptoCoinDetail>):RecyclerView.Adapter<CryptoViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CryptoViewHolder {
        val layoutInflater = LayoutInflater.from(parent.context)
