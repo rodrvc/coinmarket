@@ -24,12 +24,12 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
-    private lateinit var cryptoAdapter: CryptoCoinAdapter
+
 //    private val cryptoList = listOf<CryptoCoin>(
 //        CryptoCoin("bitcoin" , "bit")
 //    )
 
-    private val cryptoViewModel: CryptoViewModel by viewModels()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,14 +57,6 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
 
-        cryptoViewModel.onCreate()
-
-
-        cryptoViewModel.cryptoModel.observe(this , Observer {
-            cryptoAdapter = CryptoCoinAdapter(it)
-            binding.cryptoRv.layoutManager = LinearLayoutManager(this)
-            binding.cryptoRv.adapter = cryptoAdapter
-        })
 
 //
 //        cryptoViewModel.getCryptoCoins() cryptoViewModel.getCryptoCoins()
