@@ -16,7 +16,8 @@ class CryptoCoinAdapter(private val cryptocoins: List<CryptoCoinDetail>):Recycle
 
     override fun onBindViewHolder(holder: CryptoViewHolder, position: Int) {
         val item = cryptocoins[position].name
-        holder.bind(item)
+        val slug = cryptocoins[position].slug
+        holder.bind(item , slug)
     }
 
     override fun getItemCount(): Int {

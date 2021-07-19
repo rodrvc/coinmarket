@@ -10,6 +10,6 @@ class getRankingCryptoCoins {
 
 
     suspend operator fun invoke():List<CryptoCoinDetail>?{
-        return repository.getCryptoCoin();
+        return repository.getCryptoCoin()
     }
 }
