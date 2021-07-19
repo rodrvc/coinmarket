@@ -20,7 +20,7 @@ class CryptoViewModel :ViewModel() {
             val result = getCryptoCoins()
 
             if (!result.isNullOrEmpty()){
-                cryptoModel.postValue(result)
+                cryptoModel.postValue(result!!)
             }
         }
 
